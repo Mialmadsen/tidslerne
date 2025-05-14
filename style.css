@@ -1,0 +1,47 @@
+/* 
+    Theme Name : Hotel Theme
+    Author: Mia Team
+    Description: A custom WordPress theme for Tidslerne website.
+    Version: 1.0
+    
+*/
+
+:root {
+  /* Fonts */
+  --font-heading: 'Trebuchet MS', sans-serif;
+  --font-body: Verdana, sans-serif;
+
+  /* Text Sizes (Figma named) */
+  --text-body: 16px;
+  --text-h1: 60px;
+  --text-h2: 48px;
+  --text-h3: 32px;
+  --text-h4: 24px;
+
+  /* Color Styles (Figma named) */
+  --color-dark-green: #5A8C2F;
+  --color-medium-green: #C3D665;
+  --color-light-green: #E6EDB7;
+  --color-purple: #A27587;
+  --color-light-bg: #F7F7F7;
+  --color-dark: #0D0C1D;
+
+  /* Dimentions */
+    --width-full: 100%;
+    --width-12col: 1200px;
+
+    
+
+  /* Grid settings  */
+    --grid-gap: 10px;
+    --padding-default: 10px;
+
+}
+ /* Reset CSS */
+
+    * {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+  }
