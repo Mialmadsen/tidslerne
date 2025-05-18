@@ -296,7 +296,7 @@ nav a{
 }
 /* Hero image styling  */
 .hero-section {
-  position: relative;
+  /* position: relative; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -330,6 +330,102 @@ nav a{
   padding: var(--padding-default);
 }
 
+/* Card styling */
+
+.article-card {
+  display: block;
+  text-decoration: none;
+  color: var(--color-dark);
+  font-family: var(--font-body);
+  background-color: var(--color-light-green);
+  transition: background-color 0.3s ease;
+  max-width: 355px;
+  
+  overflow: hidden;
+  
+  
+}
+
+.article-card:hover {
+  background-color: var(--color-medium-green);
+}
+
+.card-image-wrapper {
+  overflow: hidden;
+}
+
+.card-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.article-card:hover .card-image-wrapper img {
+  transform: scale(1.1);
+}
+
+.card-text {
+  padding: 16px;
+  margin-bottom: 40px;
+}
+
+.card-text h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  margin-bottom: 0.5rem;
+}
+
+.card-text p {
+  font-size: var(--text-body);
+  line-height: 1.5;
+}
+
+/* Section Behandlinger Front Page */
+
+.front-page-section {
+  
+  max-width: var(--width-12col);
+  margin: 150px auto 0; 
+  padding:var(--padding-default);
+  padding: 0 1rem;
+}
+
+/* Title */
+.section_heading  {
+  
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  justify-content: start;
+  align-items: end;  
+  margin-bottom:80px;
+}
+.section_heading h2{
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  color: var(--color-dark);
+  
+  
+}
+
+.section_heading i{
+  font-size: var(--text-h4);
+  color: var(--color-dark);
+  padding:var(--padding-default);
+
+  
+  
+
+}
+/* Cards layout */
+.treatment-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap:20px;
+}
+
 
 
 @media (max-width: 600px) {
@@ -341,6 +437,23 @@ nav a{
     padding:var(--padding-default);}
 .hero-content h1 {
   font-size: var(--text-h3);
+
+}
+.section_heading h2{
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  color: var(--color-dark);
+  
+  
+}
+
+.section_heading i{
+  font-size: var(--text-body);
+  color: var(--color-dark);
+  padding:var(--padding-default);
+
+  
+  
 
 }
 
