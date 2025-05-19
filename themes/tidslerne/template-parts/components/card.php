@@ -11,7 +11,7 @@
 ?>
 
 <?php if (!empty($link)) : ?>
-<a href="<?php echo esc_url($link); ?>" class="article-card">
+<a href="<?php echo esc_url($link); ?>" class="article-card card">
     <?php if (!empty($image)) : ?>
     <div class="card-image-wrapper">
         <img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($heading); ?>">

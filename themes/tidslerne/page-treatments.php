@@ -16,7 +16,7 @@
 <section class="front-page-section">
 
 
-    <div class="cards_layout">
+    <div class="cards_layout fade-stagger">
 
         <?php
     $args = array(

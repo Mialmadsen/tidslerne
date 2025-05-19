@@ -336,6 +336,42 @@ nav a{
   color: var(--color-dark);
   padding: var(--padding-default);
 }
+/* Hero sroll-down menu */
+.hero-wrapper {
+  position: relative;
+}
+
+
+/* Position buttons in the hero area */
+
+.hero-buttons-box {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  background-color: var(--color-light-bg);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 450px;
+  z-index: 2;
+}
+
+.hero-button {
+  background-color: var(--color-light-green);
+  padding: 15px 20px;
+  font-size: var(--text-h4);
+  font-family: var(--font-heading);
+  color: var(--color-dark);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: var(--color-medium-green);
+}
+
 
 /* Introduction */
 .introduction{
@@ -389,13 +425,15 @@ nav a{
   color: var(--color-dark);
   padding:20px;
   min-width: 300px;
-  transition: box-shadow 0.2s ease;
+  transition: background-color 0.3s ease;
   color: inherit;
   
 }
+ 
 
 .visitor_type_buttons a:hover {
- box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: var(--color-medium-green);
+ 
 }
 
 .visitor_type_buttons h4 {
@@ -600,19 +638,27 @@ nav a{
 
 
 /* Footer */ 
+footer{
+  width: var(--width-full);
+  background-color: var(--color-dark);
+
+}
+
 
 .footer {
   display: flex;
   justify-content: space-between;
   gap: var(--grid-gap);
-  padding: 40px 40px 40px 40px;
+  padding: 40px 10px;
   background-color: var(--color-dark);
   color: var(--color-light-bg);
   font-family: var(--font-body);
   font-size: var(--text-body);
   flex-wrap: wrap;
-  width: var(--width-full);
-  margin-top: 150px;
+  width:100%;
+  max-width: var(--width-12col);
+  margin: 150px auto 0;
+
 }
 
 .footer-section {
@@ -692,6 +738,11 @@ nav a{
   font-size: var(--text-h3);
 
 }
+
+.hero-buttons-box {
+   
+    padding: 10px;
+  }
 .section_heading h2{
   font-family: var(--font-heading);
   font-size: var(--text-h3);
@@ -721,6 +772,10 @@ nav a{
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.footer{
+  justify-content: center;
+}
   
 }
 
@@ -728,6 +783,9 @@ nav a{
 @media (max-width: 325px) {
   .top_menu svg{
     display:none;
+  }
+  .protektor-img{
+    margin:10px auto;
   }
   
 }

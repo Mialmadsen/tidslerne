@@ -4,7 +4,7 @@
         <i class="fa-solid fa-arrow-right"></i>
     </a>
 
-    <div class="cards_layout">
+    <div class="cards_layout fade-stagger">
 
         <?php
     $args = array(

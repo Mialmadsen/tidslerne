@@ -54,3 +54,43 @@ function render_cta_from_post($post_id) {
         include get_template_directory() . '/template-parts/components/button.php';
     }
 }
+
+function tidslerne_enqueue_scripts() {
+    // GSAP CDN
+    wp_enqueue_script(
+        'gsap',
+        'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js',
+        [],
+        null,
+        true
+    );
+
+    // Custom animation script 
+    wp_enqueue_script(
+        'tidslerne-hero-animation',
+        get_template_directory_uri() . '/JS/hero-animation.js',
+        ['gsap'],
+        null,
+        true
+    );
+// ScrollTrigger plugin
+    wp_enqueue_script(
+        'gsap-scrolltrigger',
+        'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js',
+        ['gsap'],
+        null,
+        true
+    );
+
+    // Your custom animations
+    wp_enqueue_script(
+        'tidslerne-scroll-animations',
+        get_template_directory_uri() . '/JS/scroll-animations.js',
+        ['gsap', 'gsap-scrolltrigger'],
+        null,
+        true
+    );
+
+
+}
+add_action('wp_enqueue_scripts', 'tidslerne_enqueue_scripts');

@@ -1,10 +1,10 @@
-<section class="front-page-section">
+<section class="front-page-section" id="events">
     <a class="section_heading" href="https://tidslerne.nemtilmeld.dk/">
         <h2>Events</h2>
         <i class="fa-solid fa-arrow-right"></i>
     </a>
 
-    <div class="events-wrapper">
+    <div class="events-wrapper fade-stagger">
         <?php
   $events = new WP_Query([
     'post_type' => 'event',
@@ -42,7 +42,7 @@ $location = get_field('event_location');
 
 
 
-        <a class="event-card" href="<?php echo esc_url($link); ?>">
+        <a class="event-card card" href="<?php echo esc_url($link); ?>">
             <div class="event_top">
                 <div class="event-date">
                     <div><?php echo esc_html($day); ?>.</div>
