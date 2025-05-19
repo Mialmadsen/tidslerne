@@ -9,6 +9,35 @@
     include get_template_directory() . '/template-parts/components/hero.php';
     ?>
 
+<section class="front-page-section">
+
+
+    <div class="cards_layout">
+
+        <?php
+    $args = array(
+    'post_type' => 'personal-storie',
+    'posts_per_page' => -1
+    );
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) :
+    while ($query->have_posts()) : $query->the_post();
+        $image = get_field('preview_image'); // image URL
+        $heading = get_field('preview_heading');
+        $text = get_field('preview_text');
+        $link = get_permalink();
+
+        include get_template_directory() . '/template-parts/components/card.php';
+    endwhile;
+    wp_reset_postdata();
+    endif;
+    ?>
+
+
+    </div>
+</section>
+
 
 
 <?php get_template_part("template-parts/index", "newsletter") ?>

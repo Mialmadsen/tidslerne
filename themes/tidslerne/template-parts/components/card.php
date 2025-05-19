@@ -23,7 +23,7 @@
         <h3><?php echo esc_html($heading); ?></h3>
         <?php endif; ?>
         <?php if (!empty($text)) : ?>
-        <?php echo wp_kses_post($text); ?>
+        <p><?php echo wp_trim_words(wp_kses_post($text), 50, '...'); ?></p>
         <?php endif; ?>
     </div>
 </a>
