@@ -124,7 +124,7 @@ nav{
 .logo{
   text-decoration: none;
   padding: 0;
-  
+
 }
 .logo_space{
   width:50%;
@@ -389,11 +389,13 @@ nav a{
   color: var(--color-dark);
   padding:20px;
   min-width: 300px;
+  transition: box-shadow 0.2s ease;
+  color: inherit;
   
 }
 
 .visitor_type_buttons a:hover {
-  border: solid 1px var(--color-dark-green);
+ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .visitor_type_buttons h4 {
@@ -518,6 +520,80 @@ nav a{
   transform: scale(0.8);
   transform-origin: top center;
   
+}
+
+/* Section Events */
+.events-wrapper {
+  max-width: var(--width-12col);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: var(--color-light-bg);
+}
+
+.event-card {
+  flex: 1 1 calc(33.333% - 20px);
+  background: var(--color-light-bg);
+  border: 2px solid var(--color-medium-green);
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  gap: 15px;
+  font-family: var(--font-body);
+  transition: box-shadow 0.2s ease;
+  color: inherit;
+  min-height: 300px;
+}
+
+.event-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.event_top{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+.event-date {
+  background-color: var(--color-dark-green);
+  color: white;
+  font-family: var(--font-heading);
+  padding: 10px;
+  text-align: center;
+  width: 60px;
+  height:100%;
+  line-height: 1.2;
+  font-size: var(--text-body);
+}
+
+.event-location {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--text-body);
+  color: var(--color-dark);
+
+}
+
+.event-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  font-weight: bold;
+  color: var(--color-dark);
+}
+
+.event-description {
+  font-size: var(--text-body);
+  color: var(--color-dark);
+  line-height: 1.5;
+}
+
+.event-location i {
+  color: var(--color-dark);
 }
 
 
