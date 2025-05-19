@@ -1,0 +1,466 @@
+/* 
+    Theme Name : Hotel Theme
+    Author: Mia Team
+    Description: A custom WordPress theme for Tidslerne website.
+    Version: 1.0
+    
+*/
+
+:root {
+  /* Fonts */
+  --font-heading: 'Trebuchet MS', sans-serif;
+  --font-body: Verdana, sans-serif;
+
+  /* Text Sizes (Figma named) */
+  --text-body: 16px;
+  --text-h1: 60px;
+  --text-h2: 48px;
+  --text-h3: 32px;
+  --text-h4: 24px;
+
+  /* Color Styles (Figma named) */
+  --color-dark-green: #5A8C2F;
+  --color-medium-green: #C3D665;
+  --color-light-green: #E6EDB7;
+  --color-purple: #A27587;
+  --color-light-bg: #F7F7F7;
+  --color-dark: #0D0C1D;
+
+  /* Dimentions */
+    --width-full: 100%;
+    --width-12col: 1280px;
+
+    
+
+  /* Grid settings  */
+    --grid-gap: 10px;
+    --padding-default: 10px;
+
+}
+ /* Reset CSS */
+
+    * {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+  }
+body{
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--color-dark);
+  background-color: var(--color-light-bg);
+  width: var(--width-full);
+  height: auto;
+  margin: 0 auto;
+  
+nav{
+  height: auto;
+  max-width:var(--width-12col);
+  background-color: var(--color-light-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding:20px 10px;
+  position: relative;
+}
+  
+}
+
+#sidebar-active{
+  display: none;
+}
+.hidden_menu_container{
+  background-color: var(--color-dark-green);  
+  width: var(--width-full);
+  
+  position: fixed;
+  top: -100%;
+  right: 0;
+  z-index: 10;
+  transition: 0.75s ease-out;
+  display: flex;
+  flex-direction: column;
+  
+  
+  
+}
+
+.links-container{
+  background-color: var(--color-dark-green);
+  max-height: 100vh;
+  width: var(--width-full);
+  max-width: var(--width-12col);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding:20px 10px;
+ 
+  
+  
+  
+}
+
+#sidebar-active:checked ~ .hidden_menu_container{
+    top: 0;
+    
+    
+  }
+.nav_text{
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  color: var(--color-dark);
+  height: 100vh;
+  width:auto;
+  display: flex;
+  flex-direction: column;  
+  align-items: flex-start;
+  padding:0 20px;
+  
+  
+}
+
+nav a{
+  padding:20px 0 0;
+  display: flex;
+  
+  text-decoration: none;
+  color: var(--color-light-bg);
+  
+}
+
+.home-link::before{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-light-bg);
+    transition: width 0.4s ease;
+
+}
+.home-link:hover::before {
+    width: 100%;
+   
+
+}
+
+.close-sidebar-button, {
+  padding:0 20px ;
+  cursor: pointer;
+
+}
+.social_media{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: self-start;
+  gap: 20px;
+  
+  border-top: 1px solid var(--color-light-bg);
+  margin-top: 20px;
+}
+
+.social_media a:{
+  display: inline-block;
+  transition: transform 0.3s ease;
+  
+}
+.social_media a:hover{
+  transform: scale(1.2);
+}
+.icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  
+}
+
+.facebook{
+  color: var(--color-light-bg);
+  font-size: var(--text-body);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding:20px 0 0;
+  
+  
+}
+.facebook a{
+  padding:0 20px;
+}
+
+.top_menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  color: var(--color-dark);
+  position: relative;
+  
+}
+.top_menu i{
+  padding: 0 20px 0 0;
+  font-size: var(--text-h4);
+  cursor: pointer;}
+
+.search-container {
+  
+  height: 100%;
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  
+}
+
+
+.search-form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.search-input {
+    
+  all: unset; /* Resets browser and WP styles */
+  padding: 20px;
+  opacity: 0;
+  border: 1px solid var(--color-dark); 
+  background: var(--color-light-bg);
+  color: var(--color-dark);
+  transition: width 0.3s ease, opacity 0.3s ease;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 0 !important;
+}
+
+/* Expanded input when active */
+.search-container.active .search-input {
+  max-width: 200px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* CTA button styles */
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+  box-sizing: border-box;
+}
+
+.cta-button.green {
+  background-color: var(--color-dark-green);
+  color: var(--color-dark);
+}
+.cta-button.green:hover {
+  background-color: var(--color-light-green);
+  color: var(--color-dark);
+  border: 1px solid var(--color-dark-green);
+}
+
+.cta-button.light-green {
+  background-color: var(--color-light-green);
+  color: var(--color-dark);
+  border: 1px solid var(--color-dark-green);
+}
+.cta-button.light-green:hover {
+  background-color: var(--color-dark-green);
+  color: var(--color-light-bg);
+  
+}
+/* Hero image styling  */
+.hero-section {
+  /* position: relative; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: left;
+  
+}
+
+
+.hero-content {
+  width:100%;
+  max-width: var(--width-12col);
+  height: auto;
+ 
+  display: flex;
+  flex-direction: row;  
+  
+  justify-content: flex-start;
+  align-items: center;  
+  padding:var(--padding-default);
+  margin: 0 auto 30px;
+}
+
+.hero-content h1 {
+   background-color: var(--color-light-bg);
+  font-size: var(--text-h1);
+  font-family: var(--font-heading);
+  color: var(--color-dark);
+  padding: var(--padding-default);
+}
+
+/* Card styling */
+
+.article-card {
+  display: block;
+  text-decoration: none;
+  color: var(--color-dark);
+  font-family: var(--font-body);
+  background-color: var(--color-light-green);
+  transition: background-color 0.3s ease;
+  max-width: 355px;
+  
+  overflow: hidden;
+  
+  
+}
+
+.article-card:hover {
+  background-color: var(--color-medium-green);
+}
+
+.card-image-wrapper {
+  overflow: hidden;
+}
+
+.card-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.article-card:hover .card-image-wrapper img {
+  transform: scale(1.1);
+}
+
+.card-text {
+  padding: 16px;
+  margin-bottom: 40px;
+}
+
+.card-text h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  margin-bottom: 0.5rem;
+}
+
+.card-text p {
+  font-size: var(--text-body);
+  line-height: 1.5;
+}
+
+/* Section Behandlinger Front Page */
+
+.front-page-section {
+  
+  max-width: var(--width-12col);
+  margin: 150px auto 0; 
+  padding:var(--padding-default);
+  padding: 0 1rem;
+}
+
+/* Title */
+.section_heading  {
+  
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  justify-content: start;
+  align-items: end;  
+  margin-bottom:80px;
+}
+.section_heading h2{
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  color: var(--color-dark);
+  
+  
+}
+
+.section_heading i{
+  font-size: var(--text-h4);
+  color: var(--color-dark);
+  padding:var(--padding-default);
+
+  
+  
+
+}
+/* Cards layout */
+.treatment-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap:20px;
+}
+
+
+
+@media (max-width: 600px) {
+  .nav_text{
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);  
+  }
+.cta-button {
+    padding:var(--padding-default);}
+.hero-content h1 {
+  font-size: var(--text-h3);
+
+}
+.section_heading h2{
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  color: var(--color-dark);
+  
+  
+}
+
+.section_heading i{
+  font-size: var(--text-body);
+  color: var(--color-dark);
+  padding:var(--padding-default);
+
+  
+  
+
+}
+
+  
+  
+}
+
+
+
+
