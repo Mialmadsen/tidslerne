@@ -4,20 +4,20 @@
         <i class="fa-solid fa-arrow-right"></i>
     </a>
 
-    <div class="treatment-cards">
+    <div class="cards_layout">
 
         <?php
     $args = array(
-    'post_type' => 'personal-storie',
+    'post_type' => 'card',
     'posts_per_page' => 3
     );
     $query = new WP_Query($args);
 
     if ($query->have_posts()) :
     while ($query->have_posts()) : $query->the_post();
-        $image = get_field('preview_image'); // image URL
-        $heading = get_field('preview_heading');
-        $text = get_field('preview_text');
+        $image = get_field('card_image'); // image URL
+        $heading = get_field('card_heading');
+        $text = get_field('card_text');
         $link = get_permalink();
 
         include get_template_directory() . '/template-parts/components/card.php';
