@@ -41,7 +41,7 @@
 
 
 <?php get_template_part("template-parts/index", "newsletter") ?>
-<?php get_template_part("template-parts/read", "moreTreatments") ?>
+<?php get_template_part("template-parts/read", "moreTreatment") ?>
 
 
 

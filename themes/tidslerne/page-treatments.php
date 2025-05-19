@@ -11,8 +11,7 @@
     ?>
 
 
-<?php get_template_part("template-parts/index", "newsletter") ?>
-<?php get_template_part("template-parts/read", "moreStories") ?>
+
 
 <section class="front-page-section">
 
@@ -43,7 +42,8 @@
     </div>
 </section>
 
-
+<?php get_template_part("template-parts/index", "newsletter") ?>
+<?php get_template_part("template-parts/read", "moreStories") ?>
 
 
 
