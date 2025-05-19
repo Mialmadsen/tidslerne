@@ -455,7 +455,7 @@ nav a{
   font-size: var(--text-body);
   flex-wrap: wrap;
   width: var(--width-full);
-  margin: 0 auto;
+  margin-top: 150px;
 }
 
 .footer-section {
@@ -478,10 +478,10 @@ nav a{
   display: flex;
   gap: 15px;
   margin-top: 15px;
+  font-size: 60px;
 }
 
 .social-icons a .fa {
-  font-size: 100px !important;
   line-height: 1;
 }
 
