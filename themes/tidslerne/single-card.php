@@ -15,6 +15,7 @@
     <?php
     $author = get_field('article_author_');
     $date = get_field('article_date');
+
     $paragraphs = [
         get_field('paragraph_1'),
         get_field('paragraph_2'),
@@ -25,10 +26,11 @@
         get_field('paragraph_7'),
         get_field('paragraph_8'),
     ];
+
     $images = [
-        get_field('content_image_1'),
-        get_field('content_image_2'),
-        get_field('content_image_3'),
+        get_field('content_image_1'), // til højre for tekst
+        get_field('content_image_2'), // ved siden af image_3
+        get_field('content_image_3'), // ved siden af image_2
     ];
     ?>
 
@@ -42,30 +44,36 @@
       </div>
     <?php endif; ?>
 
-    <!-- Indhold -->
-    <?php
-    $image_index = 0;
-    foreach ($paragraphs as $index => $para) :
-        if (!$para) continue;
+    <?php foreach ($paragraphs as $index => $para): ?>
+  <?php if (!$para) continue; ?>
 
-        $has_image = isset($images[$image_index]) && $images[$image_index];
-        ?>
+  <div class="article-section">
+    <div class="text">
 
-        <div class="article-section<?php echo $has_image ? ' with-image' : ''; ?>">
-          <div class="text">
-            <?php echo wp_kses_post($para); ?>
-          </div>
+      <?php
+      // Når vi er ved paragraph_2 (index 1), wrap image inde i teksten
+      if ($index === 1 && $images[0]):
+      ?>
+        <img class="image-wrapped" src="<?php echo esc_url($images[0]['url']); ?>" alt="<?php echo esc_attr($images[0]['alt']); ?>">
+      <?php endif; ?>
 
-          <?php if ($has_image): ?>
-            <div class="image">
-              <img src="<?php echo esc_url($images[$image_index]['url']); ?>"
-                   alt="<?php echo esc_attr($images[$image_index]['alt']); ?>">
-            </div>
-            <?php $image_index++; ?>
-          <?php endif; ?>
-        </div>
+      <?php echo wp_kses_post($para); ?>
+    </div>
+  </div>
 
-    <?php endforeach; ?>
+  <?php
+  // Efter paragraph_4 (index 3), vis to billeder side om side
+  if ($index === 3 && $images[1] && $images[2]): ?>
+    <div class="article-image-row">
+      <div class="image-half">
+        <img src="<?php echo esc_url($images[1]['url']); ?>" alt="<?php echo esc_attr($images[1]['alt']); ?>">
+      </div>
+      <div class="image-half">
+        <img src="<?php echo esc_url($images[2]['url']); ?>" alt="<?php echo esc_attr($images[2]['alt']); ?>">
+      </div>
+    </div>
+  <?php endif; ?>
+<?php endforeach; ?>
 
   </div>
 </section>

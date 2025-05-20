@@ -600,32 +600,35 @@ nav a{
 }
 
 /* section for personlige historie*/
-.story-card {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 2rem;
-  width: 100%;
+.story-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 50% / 50% */
+  grid-template-rows: auto auto auto;
+  gap: 20px;
   max-width: var(--width-12col);
-  margin: 2rem auto;
+  margin: 0 auto;
   
+}
+
+.story-card-img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
 }
 
 .story-card-img img {
   width: 100%;
-  max-width: 500px;
+  height: auto;
   
-  object-fit: cover;
   display: block;
 }
 
 .story-card-card {
+  grid-column: 2 / 3;
+  grid-row: 2 / 4;
   background-color: var(--color-dark);
   color: var(--color-light-bg);
-  padding: 2rem;
+  padding: 40px;
   
-  max-width: 600px;
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -635,15 +638,16 @@ nav a{
 .story-card-heading h3 {
   font-family: var(--font-heading);
   font-size: var(--text-h3);
-  margin-bottom: 1rem;
-  color: white;
+  margin-bottom: 20px;
 }
 
 .story-card-text p {
   font-size: var(--text-body);
-  line-height: 1.6;
-  color: white;
-  margin-bottom: 2rem;
+  
+  margin-bottom: 40px;
+}
+.story-card-card .cta-button {
+  align-self: flex-end;
 }
 
 /* Cards layout */
@@ -657,10 +661,12 @@ nav a{
 
 .read_more-section{
   max-width: var(--width-12col);
-  margin: 150px auto 0; 
+  margin:150px auto; 
   padding:var(--padding-default);
   transform: scale(0.8);
   transform-origin: top center;
+ ;
+  
   
 }
 
@@ -993,6 +999,21 @@ footer{
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.story-card-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .story-card-img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .story-card-card {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
 
 .footer{
   justify-content: center;
