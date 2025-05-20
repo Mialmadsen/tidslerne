@@ -852,7 +852,6 @@ transition: color 0.3s ease;
 
 .support-line-number:hover {
   color: darkgreen; /* or a slightly different shade */
-  cursor: pointer;
 }
 
 
