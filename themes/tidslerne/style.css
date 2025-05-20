@@ -732,15 +732,40 @@ nav a{
 /*phone line support*/
 .support-line{
   width: var(--width-full);
-  height: 300px;
-  background-color: var(--color-light-bg);
+  height: 400px;
+  display: flex;
 }
 
 .support-line-img{
-  height: 300px;
+  height: 200px;
   width: 50%;
-  
 }
+
+.support-line-card{
+  background-color: var(--color-light-green);
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertical centering */
+  align-items: flex-start; /*align on the left*/
+}
+
+.support-line-heading{
+  color: var(--color-dark);
+  font-size: var(--text-h3);
+}
+
+.support-line-text{
+  color: var(--color-dark);
+  font-size: var(--text-body);
+}
+
+.support-line-number{
+  color: var(--color-dark-green);
+  font-size: var(--text-h1);
+}
+
 
 
 
