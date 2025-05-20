@@ -79,8 +79,13 @@
 </section>
 
 
+
+
+
+
 <?php get_template_part("template-parts/index", "newsletter") ?>
 <?php get_template_part("template-parts/read", "moreTreatment") ?>
+
 <?php get_template_part("template-parts/read", "moreStories") ?>
 
 
