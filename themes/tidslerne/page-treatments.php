@@ -1,6 +1,6 @@
 <?php get_header()?>
- <?php if(have_posts()): ?>
-  <?php while(have_posts()): the_post() ?>
+<?php if(have_posts()): ?>
+<?php while(have_posts()): the_post() ?>
 
 
 <!-- Hero image from component -->
@@ -16,7 +16,7 @@
 <section class="front-page-section">
 
 
-    <div class="cards_layout">
+    <div class="cards_layout fade-stagger">
 
         <?php
     $args = array(
@@ -41,14 +41,14 @@
 
     </div>
 </section>
-   
-    <?php get_template_part("template-parts/index", "newsletter") ?>
-    <?php get_template_part("template-parts/read", "moreStories") ?>
 
-   
+<?php get_template_part("template-parts/index", "newsletter") ?>
+<?php get_template_part("template-parts/read", "moreStories") ?>
 
-  <?php endwhile ?>
- <?php endif ?>
+
+
+<?php endwhile ?>
+<?php endif ?>
 
 
 

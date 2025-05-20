@@ -1,25 +1,22 @@
 <?php get_header()?>
- <?php if(have_posts()): ?>
-  <?php while(have_posts()): the_post() ?>
+<?php if(have_posts()): ?>
+<?php while(have_posts()): the_post() ?>
 
-  <!-- Hero image from component -->
+<!-- Hero image from component -->
 <?php
     $background_image = get_field('personal_story_hero'); // ACF Image field (return URL)
     $heading = get_field('personal_story_heading');
     include get_template_directory() . '/template-parts/components/hero.php';
     ?>
 
-
-
-
 <section class="front-page-section">
 
 
-    <div class="cards_layout">
+    <div class="cards_layout fade-stagger">
 
         <?php
     $args = array(
-    'post_type' => 'card',
+    'post_type' => 'personal-storie',
     'posts_per_page' => -1
     );
     $query = new WP_Query($args);
@@ -41,14 +38,16 @@
     </div>
 </section>
 
-    <?php get_template_part("template-parts/index", "newsletter") ?>
-    <?php get_template_part("template-parts/read", "moreTreatments") ?>
-   
 
-   
 
-  <?php endwhile ?>
- <?php endif ?>
+<?php get_template_part("template-parts/index", "newsletter") ?>
+<?php get_template_part("template-parts/read", "moreTreatment") ?>
+
+
+
+
+<?php endwhile ?>
+<?php endif ?>
 
 
 
