@@ -37,11 +37,16 @@
                 <p><?php echo wp_trim_words(wp_kses_post($text), 150, '...'); ?></p>
                 <?php endif; ?>
             </div>
+
+            <a href="<?php echo get_permalink(); ?>" class="cta-button light-green">
+                Læs mere
+            </a>
+
+
+
         </div>
 
-        <a href="<?php echo get_permalink(); ?>" class="cta-button light-green">
-            Læs mere
-        </a>
+
 
 
 

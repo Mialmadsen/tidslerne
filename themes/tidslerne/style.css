@@ -605,24 +605,25 @@ nav a{
   flex-direction: row;
   flex-wrap: wrap;
   gap: 2rem;
+  width: 100%;
   max-width: var(--width-12col);
   margin: 2rem auto;
-  padding: var(--padding-default);
+  
 }
 
 .story-card-img img {
   width: 100%;
   max-width: 500px;
-  border-radius: 10px;
+  
   object-fit: cover;
   display: block;
 }
 
 .story-card-card {
   background-color: var(--color-dark);
-  color: white;
+  color: var(--color-light-bg);
   padding: 2rem;
-  border-radius: 10px;
+  
   max-width: 600px;
   flex: 1;
   display: flex;
