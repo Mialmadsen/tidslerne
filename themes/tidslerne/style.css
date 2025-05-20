@@ -729,6 +729,18 @@ nav a{
   color: var(--color-dark);
 }
 
+/*phone line support*/
+.support-line{
+  width: var(--width-full);
+  height: 300px;
+  background-color: var(--color-light-bg);
+}
+
+.support-line-img{
+  height: 300px;
+  width: 50%;
+  
+}
 
 
 
