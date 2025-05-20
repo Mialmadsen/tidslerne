@@ -514,62 +514,110 @@ nav a{
   
 }
 
-/* Behandling single artikler */
-.article-content {
+/* Behandling single artikler start ----------*/
+.container {
   max-width: var(--width-12col);
   margin: 0 auto;
   padding: var(--padding-default);
-  font-family: var(--font-body);
-  background-color: var(--color-light-bg);
-  color: var(--color-dark);
 }
 
+/* Article meta info */
 .article-meta {
-  font-size: var(--text-body);
-  color: var(--color-dark);
-  margin-bottom: 2rem;
-  font-family: var(--font-body);
-}
-
-.article-content h1 {
-  font-size: var(--text-h1);
-  font-family: var(--font-heading);
-  color: var(--color-dark-green);
-  margin-bottom: 1rem;
-}
-
-.article-section {
-  margin-top: 3rem;
-}
-
-.article-section .text {
-  font-size: var(--text-body);
-  line-height: 1.6;
-  font-family: var(--font-body);
   margin-bottom: 1.5rem;
+  color: var(--color-dark);
+  font-size: 14px;
+}
+
+/* Article content */
+.article-content {
+  margin-top: 2rem;
+}
+
+/* Text + image beside */
+.article-section {
+  margin-bottom: 2rem;
 }
 
 .article-section.with-image {
   display: flex;
-  flex-wrap: wrap;
   gap: var(--grid-gap);
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-.article-section.with-image .text {
+.article-section .text {
   flex: 1 1 60%;
 }
 
-.article-section.with-image .image {
+.image-side {
   flex: 1 1 35%;
   text-align: right;
 }
 
-.article-section .image img {
+.image-side img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+  object-fit: cover;
 }
+
+.image-wrapped {
+  float: right;
+  width: 300px; /* Juster som ønsket */
+  margin-left: 20px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+/* Two images side by side */
+.article-image-row {
+  display: flex;
+  gap: var(--grid-gap);
+  margin: 2rem 0;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.image-half {
+  flex: 1;
+  text-align: center;
+}
+
+.image-half img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3; /* eller 16 / 9 eller 1 / 1 afhængigt af designet */
+}
+
+/* Headings override */
+h1 {
+  font-size: var(--text-h1);
+  font-family: var(--font-heading);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: var(--text-h2);
+  font-family: var(--font-heading);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: var(--text-h3);
+  font-family: var(--font-heading);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 2rem;
+}
+
+/* Behandling single artikler start ----------*/
+
 
 /* Title */
 .section_heading  {
@@ -1039,10 +1087,19 @@ footer{
 }
 
 .support-line-card{
-  
   width: 100%;
   height: 120%;
   
+}
+
+/*behandling single artikel */
+@media (max-width: 768px) {
+  .image-wrapped {
+    float: none;
+    display: block;
+    width: 50%;
+    margin: 1rem auto;
+  }
 }
 
 
