@@ -46,9 +46,20 @@
   <div class="personal-story-paragraph">
     <?php echo wp_kses_post($paragraphs[0]); // wp_kses_post is a good way to output WYSIWYG?>
   </div>
+  <!-- prints out the 1st image -->
+  <?php if (!empty($images[0])): ?>
+    <div class="personal-story-image">
+      <img src="<?php echo esc_url($images[0]); ?>" alt="Image 1" />
+    </div>
+  <?php endif; ?>
+
+  <!-- prints out the 2nd image -->
+  <?php if (!empty($images[1])): ?>
+    <div class="personal-story-image">
+      <img src="<?php echo esc_url($images[1]); ?>" alt="Image 2" />
+    </div>
+  <?php endif; ?>
 <?php endif; ?>
-
-
 
 
 <?php if (!empty($paragraphs[1])): ?>
@@ -57,10 +68,17 @@
   </div>
 <?php endif; ?>
 
+
 <?php if (!empty($paragraphs[2])): ?>
   <div class="personal-story-paragraph">
     <?php echo wp_kses_post($paragraphs[2]); ?>
   </div>
+  <!-- prints out the 3rd image -->
+  <?php if (!empty($images[2])): ?>
+    <div class="personal-story-image">
+      <img src="<?php echo esc_url($images[2]); ?>" alt="Image 3" />
+    </div>
+  <?php endif; ?>
 <?php endif; ?>
 
 <?php if (!empty($paragraphs[3])): ?>
