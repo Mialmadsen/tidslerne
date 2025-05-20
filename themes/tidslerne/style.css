@@ -154,7 +154,7 @@ nav a{
     width: 100%;
 }
 
-.close-sidebar-button, {
+.close-sidebar-button {
   padding:0 20px ;
   cursor: pointer;
 }
@@ -171,7 +171,7 @@ nav a{
   margin-top: 20px;
 }
 
-.social_media a:{
+.social_media a {
   display: inline-block;
   transition: transform 0.3s ease;
   
