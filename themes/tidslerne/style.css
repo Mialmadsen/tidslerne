@@ -749,6 +749,7 @@ nav a{
   width: var(--width-full);
   height: 400px;
   display: flex;
+  flex-direction: row;
 }
 
 .support-line-img{
@@ -758,12 +759,17 @@ nav a{
 
 .support-line-card{
   background-color: var(--color-light-green);
-  width: 70%;
-  height: auto;
+  width: 80%;
+  height: 120%;
   display: flex;
   flex-direction: column;
   justify-content: center;   /* vertical centering */
   align-items: flex-start; /*align on the left*/
+  
+}
+
+.support-card-text{
+  padding-left: 10px;
 }
 
 .support-line-heading{
