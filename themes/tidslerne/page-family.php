@@ -11,7 +11,7 @@
 
 
 
-<?php get_template_part("template-parts/index", "personaStories") ?>
+<?php get_template_part("template-parts/index", "personalStories") ?>
 <?php get_template_part("template-parts/index", "events") ?>
 <?php get_template_part("template-parts/index", "newsletter") ?>
 <?php get_template_part("template-parts/index", "supportLine") ?>

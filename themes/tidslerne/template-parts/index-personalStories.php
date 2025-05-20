@@ -18,7 +18,7 @@
         $link = get_permalink();
     ?>
 
-    <div class="story-card">
+    <div class="story-card-grid">
         <?php if (!empty($image)) : ?>
         <div class="story-card-img">
             <img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($heading); ?>">
@@ -31,10 +31,9 @@
                 <h3><?php echo esc_html($heading); ?></h3>
                 <?php endif; ?>
             </div>
-
             <div class="story-card-text">
                 <?php if (!empty($text)) : ?>
-                <p><?php echo wp_trim_words(wp_kses_post($text), 150, '...'); ?></p>
+                <?php echo wp_kses_post($text); ?>
                 <?php endif; ?>
             </div>
 
