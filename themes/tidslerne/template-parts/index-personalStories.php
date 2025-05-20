@@ -39,6 +39,10 @@
             </div>
         </div>
 
+        <a href="<?php echo get_permalink(); ?>" class="cta-button light-green">
+            Læs mere
+        </a>
+
 
 
 
