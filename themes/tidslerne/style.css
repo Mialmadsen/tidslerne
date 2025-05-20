@@ -1047,4 +1047,8 @@ footer{
   width: 100%;
   height: 120%;
 }
+
+.support-card-text{
+  padding-left: 10px;
+}
 }
