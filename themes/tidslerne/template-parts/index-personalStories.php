@@ -3,7 +3,7 @@
         <h2>Personlige historier</h2>
         <i class="fa-solid fa-arrow-right"></i>
     </a>
-    Test
+    
     <div class="story-card">
         <div class="story-card-img">
         <?php 
