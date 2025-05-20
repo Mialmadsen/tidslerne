@@ -1,7 +1,7 @@
 <section class="front-page-section">
     <div class="support-line">
         <div class="support-line-img">
-            <img src="http://tidslerne.local/wp-content/uploads/2025/05/Phone-us.png" alt="">
+            <img src="http://tidslerne.local/wp-content/uploads/2025/05/Woman-laying-e1747730268337.jpg" alt="Et billede af en kvinde som snakker i telefon">
         </div>
 
         <div class="support-line-card">
