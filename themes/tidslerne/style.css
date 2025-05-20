@@ -1103,6 +1103,11 @@ footer{
   height: 120%;
 }
 
+.support-card-text{
+  padding-left: 10px;
+}
+}
+
 /*behandling single artikel */
 @media (max-width: 768px) {
   .image-wrapped {
@@ -1111,9 +1116,4 @@ footer{
     width: 50%;
     margin: 1rem auto;
   }
-}
-
-.support-card-text{
-  padding-left: 10px;
-}
 }
