@@ -387,7 +387,7 @@ nav a{
 .intro-text{
   margin-bottom:80px;
   background-color:var(--color-light-green);
-  padding:20px;
+  padding:40px;
   width:100%;
 }
 
@@ -411,7 +411,7 @@ nav a{
   display: flex;
   height:auto;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -558,6 +558,70 @@ nav a{
   transform-origin: top center;
   
 }
+
+/* Newsletter */
+.newsletter {
+  background-color: var(--color-light-green);
+  padding: 2rem var(--padding-default);
+  font-family: var(--font-body);
+  margin-top: 150px;
+}
+
+.newsletter-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--width-12col);
+  margin: auto;
+  flex-wrap: wrap;
+  gap: var(--grid-gap);
+}
+
+.letter-icon {
+  flex: 0 0 auto;
+  margin-right: 2rem;
+  font-size: 100px;
+}
+
+.text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.text h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  margin-bottom: 0.5rem;
+  color: var(--color-dark);
+}
+
+.text p {
+  font-size: var(--text-body);
+  color: var(--color-dark);
+}
+
+.button-container {
+  flex: 0 0 auto;
+  margin-left: 2rem;
+}
+
+.button-container button {
+  background-color: var(--color-dark-green);
+  color: var(--color-dark);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: var(--text-body);
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: var(--color-light-green);
+  color: var(--color-dark);
+  border: 1px solid var(--color-dark-green);
+}
+
 
 /* Section Events */
 .events-wrapper {
@@ -787,6 +851,33 @@ footer{
     margin:10px auto;
   }
   
+}
+
+/* Newsletter media  */
+
+@media (max-width: 600px) {
+  .newsletter-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .letter-icon {
+    margin: 0 0 1rem;
+    font-size: 80px;
+  }
+
+  .text h2 {
+    font-size: var(--text-h3);
+  }
+
+  .text {
+    margin-bottom: 1rem;
+  }
+
+  .button-container {
+    margin-left: 0;
+  }
 }
 
 
