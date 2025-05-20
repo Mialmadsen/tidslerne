@@ -543,34 +543,49 @@ nav a{
 }
 
 /* section for personlige historie*/
-
-.story-card{
-  display: flex;         /*  makes children sit side by side */
-  gap: 20px;             /* adds space between them */
-  align-items: flex-end; /* aligns them at the top */
-  width: var(--width-full);
-  height: auto;
+.story-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: var(--width-12col);
+  margin: 2rem auto;
+  padding: var(--padding-default);
 }
 
-.story-card-img{
-  height: 660px;
-  width: 565px;
+.story-card-img img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
 }
 
 .story-card-card {
-  width: 50%;
-  height: 300px;
   background-color: var(--color-dark);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--font-body);
 }
 
-.story-card-heading{
-  color: var(--color-light-bg);
-  font-size: var(--text-h2);
+.story-card-heading h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  margin-bottom: 1rem;
+  color: white;
 }
 
-.story-card-text{
-  color: var(--color-light-bg);
+.story-card-text p {
   font-size: var(--text-body);
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 2rem;
 }
 
 /* Cards layout */
@@ -729,6 +744,18 @@ nav a{
   color: var(--color-dark);
 }
 
+/*phone line support*/
+.support-line{
+  width: var(--width-full);
+  height: 300px;
+  background-color: var(--color-light-bg);
+}
+
+.support-line-img{
+  height: 300px;
+  width: 50%;
+  
+}
 
 
 
