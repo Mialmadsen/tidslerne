@@ -10,7 +10,7 @@
     include get_template_directory() . '/template-parts/components/hero.php';
 ?>
 
-<section class="personal-story-content">
+<section class="article-content">
   <div class="main-container">
 
     <?php
@@ -62,14 +62,14 @@
 <?php endif; ?>
 
 
-<?php if (!empty($paragraphs[1])): ?>
+<?php if (!empty($paragraphs[1])): //second paragrap and so on?>
   <div class="personal-story-paragraph">
     <?php echo wp_kses_post($paragraphs[1]); ?>
   </div>
 <?php endif; ?>
 
 
-<?php if (!empty($paragraphs[2])): ?>
+<?php if (!empty($paragraphs[2])): //third paragrap and so on?>
   <div class="personal-story-paragraph">
     <?php echo wp_kses_post($paragraphs[2]); ?>
   </div>
@@ -81,17 +81,12 @@
   <?php endif; ?>
 <?php endif; ?>
 
-<?php if (!empty($paragraphs[3])): ?>
+<?php if (!empty($paragraphs[3])): //fourth paragrap?>
   <div class="personal-story-paragraph">
     <?php echo wp_kses_post($paragraphs[3]); ?>
   </div>
 <?php endif; ?>
 
-
-
-
-
-   
   </div>
 </section>
 
