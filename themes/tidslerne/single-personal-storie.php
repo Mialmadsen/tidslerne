@@ -42,24 +42,29 @@
 <?php endif; ?>
 
 
-<?php if (!empty($paragraphs[0])): //first paragrap and so on ?> 
+<?php if (!empty($paragraphs[0])): //first paragrap and so on?> 
   <div class="personal-story-paragraph">
-    <?php echo wp_kses_post($paragraphs[0]); // wp_kses_post is a good way to output WYSIWYG?>
+    <?php echo wp_kses_post($paragraphs[0]); ?>
   </div>
-  <!-- prints out the 1st image -->
-  <?php if (!empty($images[0])): ?>
-    <div class="personal-story-image">
-      <img src="<?php echo esc_url($images[0]); ?>" alt="Image 1" />
-    </div>
-  <?php endif; ?>
 
-  <!-- prints out the 2nd image -->
-  <?php if (!empty($images[1])): ?>
-    <div class="personal-story-image">
-      <img src="<?php echo esc_url($images[1]); ?>" alt="Image 2" />
+  <?php if (!empty($images[0]) || !empty($images[1])): ?>
+    <div class="personal-story-images">
+      <?php if (!empty($images[0])): ?>
+        <div class="personal-story-image">
+          <img src="<?php echo esc_url($images[0]); ?>" alt="Image 1" />
+        </div>
+      <?php endif; ?>
+      
+      <?php if (!empty($images[1])): ?>
+        <div class="personal-story-image">
+          <img src="<?php echo esc_url($images[1]); ?>" alt="Image 2" />
+        </div>
+      <?php endif; ?>
+
     </div>
   <?php endif; ?>
 <?php endif; ?>
+
 
 
 <?php if (!empty($paragraphs[1])): //second paragrap and so on?>
@@ -69,17 +74,22 @@
 <?php endif; ?>
 
 
-<?php if (!empty($paragraphs[2])): //third paragrap and so on?>
-  <div class="personal-story-paragraph">
-    <?php echo wp_kses_post($paragraphs[2]); ?>
+<?php if (!empty($paragraphs[2]) || !empty($images[2])): ?>
+  <div class="personal-story-row">
+    <?php if (!empty($paragraphs[2])): ?>
+      <div class="personal-story-paragraph">
+        <?php echo wp_kses_post($paragraphs[2]); ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if (!empty($images[2])): ?>
+      <div class="personal-story-image-right">
+        <img src="<?php echo esc_url($images[2]); ?>" alt="Image 3" />
+      </div>
+    <?php endif; ?>
   </div>
-  <!-- prints out the 3rd image -->
-  <?php if (!empty($images[2])): ?>
-    <div class="personal-story-image">
-      <img src="<?php echo esc_url($images[2]); ?>" alt="Image 3" />
-    </div>
-  <?php endif; ?>
 <?php endif; ?>
+
 
 <?php if (!empty($paragraphs[3])): //fourth paragrap?>
   <div class="personal-story-paragraph">

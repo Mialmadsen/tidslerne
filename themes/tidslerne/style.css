@@ -860,10 +860,51 @@ transition: color 0.3s ease;
   color: darkgreen; /* or a slightly different shade */
 }
 
-.personal-story-paragraph{
-  
+/* page for personal story article */
+
+.personal-story-images {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-wrap: nowrap; /* force same line */
+  justify-content: space-between;
 }
 
+.personal-story-image {
+  flex: 1;
+}
+
+.personal-story-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*3rd img */
+
+.personal-story-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.personal-story-paragraph {
+  flex: 1 1 60%;
+}
+
+.personal-story-image-right {
+  flex: 1 1 35%;
+}
+
+.personal-story-image-right img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
 
 
 /* Footer */ 
