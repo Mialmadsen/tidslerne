@@ -5,8 +5,7 @@
     </a>
 
     <div class="story-card">
-
-
+        
 
 
     </div>
