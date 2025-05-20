@@ -520,6 +520,37 @@ nav a{
   
 }
 
+/* section for personlige historie*/
+
+.story-card{
+  display: flex;         /*  makes children sit side by side */
+  gap: 20px;             /* adds space between them */
+  align-items: flex-end; /* aligns them at the top */
+  width: var(--width-full);
+  height: auto;
+}
+
+.story-card-img{
+  height: 660px;
+  width: 565px;
+}
+
+.story-card-card {
+  width: 50%;
+  height: 300px;
+  background-color: var(--color-dark);
+}
+
+.story-card-heading{
+  color: var(--color-light-bg);
+  font-size: var(--text-h2);
+}
+
+.story-card-text{
+  color: var(--color-light-bg);
+  font-size: var(--text-body);
+}
+
 
 
 
