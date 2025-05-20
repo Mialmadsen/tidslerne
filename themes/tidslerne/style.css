@@ -514,6 +514,63 @@ nav a{
   
 }
 
+/* Behandling single artikler */
+.article-content {
+  max-width: var(--width-12col);
+  margin: 0 auto;
+  padding: var(--padding-default);
+  font-family: var(--font-body);
+  background-color: var(--color-light-bg);
+  color: var(--color-dark);
+}
+
+.article-meta {
+  font-size: var(--text-body);
+  color: var(--color-dark);
+  margin-bottom: 2rem;
+  font-family: var(--font-body);
+}
+
+.article-content h1 {
+  font-size: var(--text-h1);
+  font-family: var(--font-heading);
+  color: var(--color-dark-green);
+  margin-bottom: 1rem;
+}
+
+.article-section {
+  margin-top: 3rem;
+}
+
+.article-section .text {
+  font-size: var(--text-body);
+  line-height: 1.6;
+  font-family: var(--font-body);
+  margin-bottom: 1.5rem;
+}
+
+.article-section.with-image {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--grid-gap);
+  align-items: flex-start;
+}
+
+.article-section.with-image .text {
+  flex: 1 1 60%;
+}
+
+.article-section.with-image .image {
+  flex: 1 1 35%;
+  text-align: right;
+}
+
+.article-section .image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 /* Title */
 .section_heading  {
   
