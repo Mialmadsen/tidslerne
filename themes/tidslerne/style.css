@@ -847,6 +847,12 @@ nav a{
 .support-line-number{
   color: var(--color-dark-green);
   font-size: var(--text-h1);
+transition: color 0.3s ease;
+}
+
+.support-line-number:hover {
+  color: darkgreen; /* or a slightly different shade */
+  cursor: pointer;
 }
 
 
