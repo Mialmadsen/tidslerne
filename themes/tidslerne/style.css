@@ -862,6 +862,7 @@ nav a{
   max-width: var(--width-12col);
   padding: var(--padding-default);
   margin: auto;
+  margin-top: 2rem;
 }
 
 .support-line{
