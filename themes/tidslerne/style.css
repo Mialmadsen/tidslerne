@@ -34,7 +34,7 @@
 
   /* Grid settings  */
     --grid-gap: 10px;
-    --padding-default: 10px;
+    --padding-default: 12px;
 
 }
  /* Reset CSS */
@@ -334,7 +334,7 @@ nav a{
   font-size: var(--text-h1);
   font-family: var(--font-heading);
   color: var(--color-dark);
-  padding: var(--padding-default);
+  padding: 32px;
 }
 /* Hero sroll-down menu */
 .hero-wrapper {
@@ -422,7 +422,7 @@ nav a{
   text-decoration: none;
   background-color: var(--color-light-green);
   color: var(--color-dark);
-  padding:20px;
+  padding:32px;
   min-width: 300px;
   transition: background-color 0.3s ease;
   color: inherit;
@@ -485,7 +485,7 @@ nav a{
   display: flex;
   flex-direction: column;
   justify-content: start;
-  padding:20px;
+  padding:32px;
 }
 
 .card-text h3 {
@@ -510,7 +510,7 @@ nav a{
   
   max-width: var(--width-12col);
   margin:130px auto 0; 
-  padding:0 10px;
+  padding:0 12px;
   
 }
 
@@ -748,7 +748,7 @@ nav a{
   flex: 1 1 calc(33.333% - 20px);
   background: var(--color-light-bg);
   border: 2px solid var(--color-medium-green);
-  padding: 0 20px 20px 20px;
+  padding: 0 32px 32px 32px;
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -773,7 +773,7 @@ nav a{
   background-color: var(--color-dark-green);
   color: white;
   font-family: var(--font-heading);
-  padding: 10px;
+  padding: 12px;
   text-align: center;
   width: 60px;
   height:100%;
