@@ -115,6 +115,8 @@
                 <i class="fa-solid fa-magnifying-glass search-icon"></i>
                 <form method="get" action="<?php echo esc_url(home_url('/')); ?>" class="search-form">
                     <input type="text" name="s" class="search-input" placeholder="Søg..." />
+                    <button type="submit" class="search-submit" style="display: none;"></button>
+                    <!-- Hidden -->
                 </form>
             </li>
 

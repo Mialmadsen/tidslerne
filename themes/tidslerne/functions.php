@@ -113,3 +113,18 @@ function enqueue_newsletter_script() {
     );
 }
 add_action('wp_enqueue_scripts', 'enqueue_newsletter_script');
+function tidslerne_include_custom_post_types_in_search($query) {
+    if ($query->is_search && $query->is_main_query()) {
+        $query->set('post_type', [
+            'post', 'page', 
+            'card',
+            
+            'event',
+            'gallery',
+            
+            'personal-storie',
+            
+        ]);
+    }
+}
+add_action('pre_get_posts', 'tidslerne_include_custom_post_types_in_search');

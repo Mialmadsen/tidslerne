@@ -301,6 +301,28 @@ nav a{
   color: var(--color-light-bg);
   
 }
+/* Search page styling  */
+.search-results {
+    max-width: var(--width-12col);
+    margin: 2rem auto;
+    padding: var(--padding-default);
+}
+.search-list li {
+    margin: 1.5rem 0;
+
+}
+.search-list li a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    
+}
+.search-results p{
+    font-size: var(--text-body);
+    color: var(--color-dark);
+    margin: 2rem auto;
+}
 /* Hero image styling  */
 .hero-section {
   /* position: relative; */
