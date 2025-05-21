@@ -10,7 +10,7 @@
     ?>
 
 <section class="article-content">
-  <div class="container">
+  <div class="article-content-container">
 
     <?php
     $author = get_field('article_author_');

@@ -515,7 +515,7 @@ nav a{
 }
 
 /* Behandling single artikler start ----------*/
-.container {
+.article-content-container {
   max-width: var(--width-12col);
   margin: 0 auto;
   padding: var(--padding-default);
@@ -591,20 +591,20 @@ nav a{
 }
 
 /* Headings override */
-h1 {
+.article-content h1 {
   font-size: var(--text-h1);
   font-family: var(--font-heading);
   margin-bottom: 1rem;
 }
 
-h2 {
+.article-content h2 {
   font-size: var(--text-h2);
   font-family: var(--font-heading);
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
-h3 {
+.article-content h3 {
   font-size: var(--text-h3);
   font-family: var(--font-heading);
   margin-top: 1.5rem;
@@ -612,7 +612,7 @@ h3 {
 }
 
 /* Paragraphs */
-p {
+.article-content p {
   margin-bottom: 2rem;
 }
 
