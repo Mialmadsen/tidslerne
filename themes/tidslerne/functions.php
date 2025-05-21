@@ -34,17 +34,19 @@ function tidslerne_disable_gutenberg_on_pages() {
 }
 add_action("init", "tidslerne_disable_gutenberg_on_pages");
 
+// Search
 function enqueue_search_toggle_script() {
     wp_enqueue_script(
         'search-toggle',
         get_template_directory_uri(). '/JS/search-toggle.js',
-        array(), // dependencies
-        null,    // version
-        true     // load in footer
+        array(), 
+        null,    
+        true     
     );
 }
 add_action('wp_enqueue_scripts', 'enqueue_search_toggle_script');
 
+// Button
 function render_cta_from_post($post_id) {
     $text = get_field('cta_text', $post_id);
     $url = get_field('cta_link', $post_id);
@@ -65,7 +67,7 @@ function tidslerne_enqueue_scripts() {
         true
     );
 
-    // Custom animation script 
+    // Buttons appear on the hero image
     wp_enqueue_script(
         'tidslerne-hero-animation',
         get_template_directory_uri() . '/JS/hero-animation.js',
@@ -82,7 +84,7 @@ function tidslerne_enqueue_scripts() {
         true
     );
 
-    // Your custom animations
+    // Animation 
     wp_enqueue_script(
         'tidslerne-scroll-animations',
         get_template_directory_uri() . '/JS/scroll-animations.js',
@@ -94,3 +96,20 @@ function tidslerne_enqueue_scripts() {
 
 }
 add_action('wp_enqueue_scripts', 'tidslerne_enqueue_scripts');
+
+// Newsletter
+
+function enqueue_newsletter_script() {
+    
+    wp_enqueue_script('jquery');
+
+    
+    wp_enqueue_script(
+        'newsletter-script',
+        get_template_directory_uri() . '/JS/newsletter.js',
+        array('jquery'), 
+        filemtime(get_template_directory() . '/JS/newsletter.js'), 
+        true 
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_newsletter_script');
