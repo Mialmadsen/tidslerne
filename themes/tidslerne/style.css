@@ -855,9 +855,16 @@ p {
   color: var(--color-dark);
 }
 
+
+
 /*phone line support*/
+.personal-article-content{
+  max-width: var(--width-12col);
+  padding: var(--padding-default);
+  margin: auto;
+}
+
 .support-line{
-  width: var(--width-full);
   height: 400px;
   display: flex;
   flex-direction: row;
