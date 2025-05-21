@@ -18,14 +18,14 @@
         $link = get_permalink();
     ?>
 
-    <div class="story-card-grid">
+    <div class="story-card-grid fade-stagger">
         <?php if (!empty($image)) : ?>
-        <div class="story-card-img">
+        <div class="story-card-img card">
             <img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($heading); ?>">
         </div>
         <?php endif; ?>
 
-        <div class="story-card-card">
+        <div class="story-card-card card">
             <div class="story-card-heading">
                 <?php if (!empty($heading)) : ?>
                 <h3><?php echo esc_html($heading); ?></h3>
