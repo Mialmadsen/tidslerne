@@ -917,6 +917,10 @@ transition: color 0.3s ease;
   padding: var(--padding-default);
 }
 
+.personal-article-content p {
+  margin-bottom: 2rem ;
+}
+
 .article-meta-ps{
   margin-top: 1.5rem;
   color: var(--color-dark);
