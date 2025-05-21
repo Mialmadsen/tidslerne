@@ -917,6 +917,12 @@ transition: color 0.3s ease;
   padding: var(--padding-default);
 }
 
+.article-meta-ps{
+  margin-top: 1.5rem;
+  color: var(--color-dark);
+  font-size: 14px;
+}
+
 .personal-story-images {
   display: flex;
   gap: 20px;
