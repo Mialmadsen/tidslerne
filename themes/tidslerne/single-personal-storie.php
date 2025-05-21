@@ -32,7 +32,7 @@
     ?>
 
 <?php if ($date || $author): ?>
-  <div class="article-meta">
+  <div class="article-meta-ps">
     <p>
       <?php if ($date) echo date_i18n('d/m/Y', strtotime($date)); ?>
       <?php if ($date && $author) echo ' – '; ?>
