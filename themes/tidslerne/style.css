@@ -944,8 +944,8 @@ transition: color 0.3s ease;
   width: 100%; /* img fylder containeren*/
   height: auto;
   display: block; /* de inliner i bunden*/
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 /*3rd img */
