@@ -10,7 +10,7 @@
     include get_template_directory() . '/template-parts/components/hero.php';
 ?>
 
-<section class="article-content">
+<section class="personal-article-content">
   <div class="main-container">
 
     <?php

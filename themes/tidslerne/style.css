@@ -857,7 +857,7 @@ p {
 
 /*phone line support*/
 .support-line{
-  width: var(--width-full);
+  max-width: var(--width-12col);
   height: 400px;
   display: flex;
   flex-direction: row;
@@ -907,7 +907,15 @@ transition: color 0.3s ease;
   color: darkgreen; /* or a slightly different shade */
 }
 
-/* page for personal story article */
+
+
+/* page for personal story article ------------------------------------*/
+
+.personal-article-content{ /* alt content*/
+  max-width: var(--width-12col);
+  margin: 0 auto;
+  padding: var(--padding-default);
+}
 
 .personal-story-images {
   display: flex;
