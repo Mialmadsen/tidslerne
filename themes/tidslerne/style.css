@@ -590,7 +590,7 @@ nav a{
   aspect-ratio: 4 / 3; /* eller 16 / 9 eller 1 / 1 afhængigt af designet */
 }
 
-/* Headings override */
+/* Headings */
 .article-content h1 {
   font-size: var(--text-h1);
   font-family: var(--font-heading);
