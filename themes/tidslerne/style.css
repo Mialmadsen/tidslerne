@@ -706,23 +706,56 @@ nav a{
 
   }
 
-.read_more-section{
-  max-width: var(--width-12col);
-  margin:150px auto; 
-  padding:var(--padding-default);
-  transform: scale(0.8);
-  transform-origin: top center;
- ;
-  
-  
+/* Read more section */
+
+/* Scaled Cards Layout (80% size effect) */
+.cards_layout--scaled .cards_layout {
+  gap: 32px; 
+  justify-content: center;
 }
+
+.cards_layout--scaled .article-card {
+  max-width: 284px; 
+  min-height: 400px;
+}
+
+
+.cards_layout--scaled .card-image-wrapper {
+  height: 200px; 
+}
+
+
+.cards_layout--scaled .card-text {
+  padding: 25px; 
+}
+
+.cards_layout--scaled .card-text h3 {
+  font-size: calc(var(--text-h4) * 0.8);
+}
+
+.cards_layout--scaled .card-text p {
+  font-size: calc(var(--text-body) * 0.8);
+  -webkit-line-clamp: 7; /* Slightly less text */
+}
+
+
+.cards_layout--scaled + .section_heading h2 {
+  font-size: calc(var(--text-h2) * 0.8);
+}
+
+.cards_layout--scaled + .section_heading i {
+  font-size: calc(var(--text-h4) * 0.8);
+  padding: calc(var(--padding-default) * 0.8);
+}
+
+
 
 /* Newsletter */
 .newsletter {
   background-color: var(--color-light-green);
   padding: 2rem var(--padding-default);
   font-family: var(--font-body);
-  margin-top: 150px;
+  margin-top: 130px;
 }
 
 .newsletter-content {
@@ -856,6 +889,7 @@ nav a{
 }
 
 /*phone line support*/
+
 .support-line{
   max-width: var(--width-12col);
   height: 400px;

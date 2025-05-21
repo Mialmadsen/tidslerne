@@ -1,13 +1,14 @@
-<section class="read_more-section">
-    <a class="section_heading" href="<?php echo esc_url( home_url( '/personalstories/' ) );?>">
-        <h2>Læs om personlige historier</h2>
-        <i class="fa-solid fa-arrow-right"></i>
-    </a>
+<section class="front-page-section">
+    <div class="cards_layout--scaled">
+        <a class="section_heading" href="<?php echo esc_url( home_url( '/personalstories/' ) );?>">
+            <h2>Læs om personlige historier</h2>
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
 
 
-    <div class="cards_layout fade-stagger">
+        <div class="cards_layout fade-stagger">
 
-        <?php
+            <?php
     $args = array(
     'post_type' => 'personal-storie',
     'posts_per_page' => 3
@@ -28,5 +29,7 @@
     ?>
 
 
+        </div>
     </div>
+
 </section>
