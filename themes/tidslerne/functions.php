@@ -128,7 +128,7 @@ function tidslerne_include_custom_post_types_in_search($query) {
     }
 }
 add_action('pre_get_posts', 'tidslerne_include_custom_post_types_in_search');
-
+// Filter categories
 function register_behandling_category_taxonomy() {
     register_taxonomy('behandling_category', 'card', array(
         'label' => 'Behandling Kategorier',

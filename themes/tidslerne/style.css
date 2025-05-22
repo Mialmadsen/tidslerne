@@ -139,7 +139,10 @@ nav a{
   color: var(--color-light-bg);
   
 }
-
+.home-link {
+  position: relative;
+  display: inline-block;
+}
 .home-link::before{
     content: "";
     position: absolute;
@@ -1092,7 +1095,7 @@ nav a{
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    margin: 2rem 0;
+    margin: 3rem 0;
     font-family: var(--font-body);
    
 }
