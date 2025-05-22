@@ -218,6 +218,12 @@ nav a{
   position: relative;
   
 }
+.top_menu a{
+  list-style: none;
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  
+}
 .top_menu i{
   padding: 0 20px 0 0;
   font-size: var(--text-h4);
@@ -970,7 +976,7 @@ nav a{
 .support-line-heading {
   color: var(--color-dark);
   font-size: var(--text-h3);
-  margin: 0 0 1rem;
+  margin: 0 0 3rem;
 }
 
 .support-line-text {
@@ -1080,7 +1086,40 @@ nav a{
   height: 400px;
   object-fit: cover;
 }
+/* Filter */
+.filter-form {
+  
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 2rem 0;
+    font-family: var(--font-body);
+   
+}
 
+.filter-form label {
+    color: var(--color-dark);
+    font-size: var(--text-h4);
+    font-family: var(--font-heading);
+}
+
+.filter-form select {
+    
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 2px solid var(--color-light-green);
+    border-radius: 0; 
+    background-color: var(--color-light-bg); 
+    color: var(--color-dark); 
+    cursor: pointer;
+   
+    transition: border-color 0.2s ease;
+}
+
+.filter-form select:focus {
+    border-color: var(--color-medium-green);
+    
+}
 
 
 /* Footer -----------------------------------------------*/ 
@@ -1304,15 +1343,17 @@ footer{
 .support-line {
     flex-direction: column;
     align-items: center;
-    padding: 2rem 1rem;
+    padding: 2rem 0;
   }
 
   .support-line-img {
+    /* If we want the image visible 
     top: 0; 
     width: 100%;
     max-width: 300px;
     height: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; */
+    display: none;;
   }
 
   .support-line-card {

@@ -128,3 +128,14 @@ function tidslerne_include_custom_post_types_in_search($query) {
     }
 }
 add_action('pre_get_posts', 'tidslerne_include_custom_post_types_in_search');
+
+function register_behandling_category_taxonomy() {
+    register_taxonomy('behandling_category', 'card', array(
+        'label' => 'Behandling Kategorier',
+        'hierarchical' => true, // Like categories
+        'public' => true,
+        'show_in_rest' => true,
+        'rewrite' => array('slug' => 'behandling-kategori'),
+    ));
+}
+add_action('init', 'register_behandling_category_taxonomy');
