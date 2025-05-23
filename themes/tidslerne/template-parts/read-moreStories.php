@@ -6,7 +6,7 @@
         </a>
 
 
-        <div class="cards_layout fade-stagger">
+        <div class="cards_layout_page fade-stagger">
 
             <?php
     $args = array(

@@ -82,6 +82,7 @@ nav{
   transition: 0.75s ease-out;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   
   
   
@@ -96,7 +97,7 @@ nav{
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
-  padding:20px 10px;
+  padding: 4rem 12px;
  
   
   
@@ -167,11 +168,12 @@ nav a{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: self-start;
+  align-items:self-start;
+  
   gap: 20px;
   
   border-top: 1px solid var(--color-light-bg);
-  margin-top: 20px;
+  margin-top: 3rem;
 }
 
 .social_media a {
@@ -306,8 +308,8 @@ nav a{
   border: 1px solid var(--color-dark-green);
 }
 .cta-button.light-green:hover {
-  background-color: var(--color-dark-green);
-  color: var(--color-light-bg);
+  background-color: var(--color-medium-green);
+  
   
 }
 /* Search page styling  */
@@ -535,6 +537,77 @@ nav a{
   text-overflow: ellipsis
 }
 
+/* Carousel */
+/* Carousel wrapper */
+.arrow-wrapper{
+  position: relative;
+  max-width: var(--width-12col);
+  display: flex;
+    
+  margin: 0 auto;
+}
+.card-carousel-wrapper {
+  
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Scrollable horizontal layout */
+.cards_layout.card-carousel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; 
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 40px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  padding: 0 20px 20px;
+}
+
+/* Hide scrollbar */
+.cards_layout.card-carousel::-webkit-scrollbar {
+  display: none;
+}
+.cards_layout.card-carousel {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Cards must not shrink, fixed width */
+.cards_layout.card-carousel .article-card {
+  flex: 0 0 355px;
+  scroll-snap-align: center;
+  min-height: 500px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--color-medium-green);
+  cursor: pointer;
+  z-index: 3;
+ 
+  padding: var(--padding-default);
+  
+}
+
+.arrow.left {
+  left: -10px;
+  
+}
+
+.arrow.right {
+  right: -10px;
+}
 /* Section Behandlinger Front Page */
 
 .front-page-section {
@@ -729,13 +802,13 @@ nav a{
 }
 
 /* Cards layout */
-.cards_layout {
+.cards_layout_page {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
   justify-content: center; 
 
-  }
+  } 
 
 /* Read more section */
 
@@ -1065,18 +1138,44 @@ nav a{
 
 
 /* Gallery */
-.gallery-grid {
-  background-color: var(--color-light-bg);
-  padding: var(--padding-default);
-  max-width: var(--width-12col);
-  margin: 0 auto;
-}
 
 .gallery-grid {
+  background-color: var(--color-light-bg);
+  
+  max-width: var(--width-12col);
+  margin: 0 auto;
+
+
   display: flex;
   flex-wrap: wrap;
   gap: var(--grid-gap);
   justify-content: space-between;
+}
+
+.gallery-item {
+  flex: 0 0 calc(33.333% - var(--grid-gap) * 2);
+  margin-bottom: var(--grid-gap);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+} 
+
+
+
+.gallery-grid_page  {
+  background-color: var(--color-light-bg);
+  padding: var(--padding-default);
+  max-width: var(--width-12col);
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  
+  justify-content: space-between;
+  
 }
 
 .gallery-item {
@@ -1312,6 +1411,9 @@ footer{
 /* Newsletter media */
 
 @media (max-width: 600px) {
+  .links-container{
+    padding-top: 2rem
+  }
   .newsletter-content {
     flex-direction: column;
     align-items: center;

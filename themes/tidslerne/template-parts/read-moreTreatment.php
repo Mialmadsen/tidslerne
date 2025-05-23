@@ -5,12 +5,12 @@
             <i class="fa-solid fa-arrow-right"></i>
         </a>
 
-        <div class="cards_layout fade-stagger">
+        <div class="cards_layout_page fade-stagger">
 
             <?php
     $args = array(
     'post_type' => 'card',
-    'posts_per_page' => 3
+    'posts_per_page' => 6
     );
     $query = new WP_Query($args);
 

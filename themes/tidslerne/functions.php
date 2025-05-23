@@ -139,3 +139,49 @@ function register_behandling_category_taxonomy() {
     ));
 }
 add_action('init', 'register_behandling_category_taxonomy');
+// Loading only 6 cards
+function enqueue_card_scroll_script() {
+  wp_enqueue_script('card-scroll', get_template_directory_uri() . '/JS/card-scroll.js', ['jquery'], null, true);
+  wp_localize_script('card-scroll', 'cardScrollAjax', [
+    'ajaxurl' => admin_url('admin-ajax.php'),
+  ]);
+}
+add_action('wp_enqueue_scripts', 'enqueue_card_scroll_script');
+
+function load_more_cards_ajax() {
+  $paged = isset($_POST['page']) ? intval($_POST['page']) : 1;
+  $posts_per_page = 6;
+
+  $args = array(
+    'post_type' => 'card',
+    'posts_per_page' => $posts_per_page,
+    'paged' => $paged,
+  );
+
+  $query = new WP_Query($args);
+  $html = '';
+
+  if ($query->have_posts()) {
+    ob_start();
+    while ($query->have_posts()) : $query->the_post();
+      include get_template_directory() . '/template-parts/components/card.php';
+    endwhile;
+    wp_reset_postdata();
+    $html = ob_get_clean();
+  }
+
+  $has_more = $query->found_posts > $paged * $posts_per_page;
+
+  wp_send_json([
+    'html' => $html,
+    'has_more' => $has_more,
+  ]);
+}
+
+
+function enqueue_fancybox_assets() {
+    // Fancybox 4 CSS and JS from CDN
+    wp_enqueue_style('fancybox-css', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css');
+    wp_enqueue_script('fancybox-js', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js', [], null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_fancybox_assets');

@@ -34,7 +34,7 @@
     </form>
 
 
-    <div class="cards_layout fade-stagger">
+    <div class="cards_layout_page fade-stagger">
         <?php
 
     $filter = isset($_GET['filter']) ? sanitize_text_field($_GET['filter']) : '';
