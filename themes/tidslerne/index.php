@@ -14,8 +14,8 @@
     <!-- Button box  -->
 
     <div class="hero-buttons-box">
-        <a href="#behandlinger" class="hero-button">Behandlinger</a>
-        <a href="#personlige-historier" class="hero-button">Personlige historier</a>
+        <a href="<?php echo esc_url( home_url( '/treatments/' ) );?>" class="hero-button">Behandlinger</a>
+        <a href="<?php echo esc_url( home_url( '/personalstories/' ) );?>" class="hero-button">Personlige historier</a>
         <a href="#events" class="hero-button">Events</a>
     </div>
 

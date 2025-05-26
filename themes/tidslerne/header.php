@@ -110,7 +110,7 @@
 
 
             </li>
-            <li> Log ind</li>
+            <li> <a href="https://medlem.tidslerne.dk/" class="log_in">Log ind</a> </li>
             <li class="search-container">
                 <i class="fa-solid fa-magnifying-glass search-icon"></i>
                 <form method="get" action="<?php echo esc_url(home_url('/')); ?>" class="search-form">

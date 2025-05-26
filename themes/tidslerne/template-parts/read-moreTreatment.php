@@ -10,7 +10,7 @@
             <?php
     $args = array(
     'post_type' => 'card',
-    'posts_per_page' => 6
+    'posts_per_page' => 3
     );
     $query = new WP_Query($args);
 

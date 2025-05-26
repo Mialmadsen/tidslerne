@@ -140,6 +140,15 @@ nav a{
   color: var(--color-light-bg);
   
 }
+.log_in{
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  color: var(--color-dark);
+  text-decoration: none;
+  display: flex;
+  padding: var(--padding-default);
+ 
+}
 .home-link {
   position: relative;
   display: inline-block;
