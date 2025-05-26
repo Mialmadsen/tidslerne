@@ -1406,7 +1406,7 @@ footer{
 
 
 @media (max-width: 325px) {
-  .top_menu svg{
+  .top_menu .logo{
     display:none;
   }
   .protektor-img{
@@ -1415,6 +1415,7 @@ footer{
   .story-card-card{
     padding: 20px;
   }
+  
 }
 
 /* Newsletter media */
